@@ -1,55 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Vegetable Shop</title>
-		<link rel="stylesheet" href="style.css" />
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-			crossorigin="anonymous" />
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-			crossorigin="anonymous"></script>
-	</head>
-	<body class="bg-dark">
-		<h1 class="text-center mb-5 bg-success">VEG SHOP</h1>
-		<div class="container mt-3">
-			<form
-				onsubmit="handleAddVegtoShop(event)"
-				id="forms"
-				class="col-lg-6 col-md-8 m-auto pb-3 p-4 bg-secondary-subtle border-secondary-subtle rounded-3">
-				<label for="vegname" class="form-label">Name :</label>
-				<input type="text" id="vegname" class="form-control" required />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vegetable Shop</title>
+    <link rel="shortcut icon" href="groceries.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="bg-dark">
+    <h1 class="text-center mb-5 bg-success">VEG SHOP</h1>
+    <div class="container mt-3">
+      <form
+        onsubmit="handleAddVegtoShop(event)"
+        id="forms"
+        class="col-lg-6 col-md-8 m-auto pb-3 p-4 bg-secondary-subtle border-secondary-subtle rounded-3"
+      >
+        <label for="vegname" class="form-label">Name :</label>
+        <input type="text" id="vegname" class="form-control" required />
 
-				<label for="vegprice" class="form-label">Price :</label>
-				<div class="input-group">
-					<span class="input-group-text fw-bold">₹</span>
-					<input type="number" id="vegprice" class="form-control" required />
-				</div>
+        <label for="vegprice" class="form-label">Price :</label>
+        <div class="input-group">
+          <span class="input-group-text fw-bold">₹</span>
+          <input type="number" id="vegprice" class="form-control" required />
+        </div>
 
-				<label for="vegqty" class="form-label">Quantity :</label>
-				<div class="input-group">
-					<span class="input-group-text fw-bold">KG</span>
-					<input type="number" id="vegqty" class="form-control" required />
-				</div>
+        <label for="vegqty" class="form-label">Quantity :</label>
+        <div class="input-group">
+          <span class="input-group-text fw-bold">KG</span>
+          <input type="number" id="vegqty" class="form-control" required />
+        </div>
 
-				<div class="d-flex justify-content-center">
-					<button id="addbtn" class="btn btn-success btn-lg mt-3 w-75" type="submit">Add to Shop</button>
-				</div>
-			</form>
-		</div>
+        <div class="d-flex justify-content-center">
+          <button
+            id="addbtn"
+            class="btn btn-success btn-lg mt-3 w-75"
+            type="submit"
+          >
+            Add to Shop
+          </button>
+        </div>
+      </form>
+    </div>
 
-		<div class="container mt-3 p-1 col-lg-6">
-			<h3 class="text-center">Vegetable List</h3>
-			<h5 class="text-bg-dark text-center">Total Veggies : <span id="total" class="text-bg-dark"></span></h5>
-			<ul id="VegLists" class="m-1 pt-3 p-3 pb-1 text-bg-dark list-group list-unstyled border border-info border-3 border-opacity-50 rounded-3"></ul>
-		</div>
+    <div class="container mt-3 p-1 col-lg-6">
+      <h3 class="text-center">Vegetable List</h3>
+      <h5 class="text-bg-dark text-center">
+        Total Veggies : <span id="total" class="text-bg-dark"></span>
+      </h5>
+      <ul
+        id="VegLists"
+        class="m-1 pt-3 p-3 pb-1 text-bg-dark list-group list-unstyled border border-info border-3 border-opacity-50 rounded-3"
+      ></ul>
+    </div>
 
-		<script src="index.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js"></script>
-	</body>
+    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js"></script>
+  </body>
 </html>
